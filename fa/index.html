@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پویا قربانی — رزومه</title>
+  <meta name="description" content="طراحی مدرن اپلیکیشن و وب‌سایت" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Vazir+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link href="../styles.css" rel="stylesheet">
+ 
+</head>
+<body>
+  <a href="#main" class="muted" style="position:absolute; right:-9999px; top:auto; width:1px; height:1px; overflow:hidden">پرش به محتوا</a>
+  <!-- ======= نوار بالایی موبایل ======= -->
+  <header class="topbar">
+    <button class="hamburger" id="openMenu" aria-label="باز کردن منو">☰</button>
+    <div style="display:flex; align-items:center; gap:10px">
+      <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار" style="width:36px; height:36px" />
+      <div>
+        <div class="name">پویا قربانی</div>
+        <div class="role">توسعه‌دهنده وب</div>
+      </div>
+    </div>
+  </header>
+  <div class="app" id="app">
+    <!-- ======= نوار کناری (لیست گفتگوها) ======= -->
+    <aside class="sidebar" id="sidebar" aria-label="نوار کناری">
+      <div class="brand">
+        <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+        <div>
+          <div class="name">پویا قربانی</div>
+          <div class="role">توسعه‌دهنده وب</div>
+        </div>
+      </div>
+      <div class="search" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21L16.65 16.65M19 11.5C19 15.6421 15.6421 19 11.5 19C7.35786 19 4 15.6421 4 11.5C4 7.35786 7.35786 4 11.5 4C15.6421 4 19 7.35786 19 11.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <input id="search" type="search" placeholder="جستجوی بخش‌ها... ( / )" aria-label="جستجوی بخش‌ها" />
+      </div>
+      <nav class="menu" id="menu" aria-label="بخش‌ها">
+        <button data-section="about" aria-current="page">💬 درباره من <span class="pill">معرفی</span></button>
+        <button data-section="skills">🧰 مهارت‌ها</button>
+        <button data-section="experience">🧑‍💻 تجربیات</button>
+        <button data-section="projects">📦 پروژه‌ها</button>
+        <button data-section="contact">📨 تماس</button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="ghost" id="downloadCV">📥 رزومه</button>
+        <!-- <button class="primary" id="hireMe">استخدام من</button> -->
+      </div>
+      <small class="muted" style="text-align:center">© <span id="year"></span> پویا قربانی</small>
+    </aside>
+    <!-- ======= پنل گفتگو (محتوا به صورت پیام) ======= -->
+    <main class="chat" id="main" tabindex="-1">
+      <div class="thread-title">
+        <span class="status-dot" aria-hidden="true"></span>
+        <div>
+          <div style="font-weight:700">رزومه</div>
+        </div>
+        <div style="margin-right:auto; display:flex; gap:8px; align-items:center">
+            <a class="toggle-lang" href="../index.html">🇺🇸 en</a>
+          <!-- <span class="chip">برای جستجو <span class="mono">/</span> را فشار دهید</span> -->
+        </div>
+      </div>
+      <!-- ======= گفتگوها / بخش‌ها ======= -->
+      <section id="section-about" class="messages" role="region" aria-label="درباره من">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+          <div class="bubble">
+            <h2 style="margin:0 0 6px">سلام! من <span style="font-weight:800">پویا</span> هستم 👋</h2>
+            <p> علاقه‌مند به فناوری و عاشق ساخت وب اپلیکیشن. من برنامه‌های کاربردی مقیاس‌پذیر را با توجه دقیق به تجربه کاربری و عملکرد توسعه میدم. از بک‌اند تا فرانت‌اند -- 
+              ایده‌ها را به زندگی می‌آورم.
+            </p>
+            <div class="meta">در حال حاضر در حال کاوش در هوش مصنوعی و علم داده هستم.</div>
+          </div>
+        </div>
+        <div class="msg right">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=67" alt="کارشناس استخدام"/>
+          <div class="bubble">
+            <p>چه چیزی شما را متفاوت می‌کند؟</p>
+            <div class="meta">کارشناس استخدام • همین الان</div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+          <div class="bubble">
+            <ul style="padding-right:18px; margin:0">
+              <li>نگرش محصول‌محور با مهارت‌های قوی در طراحی سیستم.</li>
+              <li>کد تمیز و ماژولار (Next.js، TypeScript، Laravel).</li>
+              <li>ساخت نمونه اولیه سریع با رابط کاربری زیبا و در دسترس.</li>
+            </ul>
+            <div class="meta">در حال تایپ • 2 دقیقه پیش</div>
+          </div>
+        </div>
+      </section>
+      <section id="section-skills" class="messages hidden" role="region" aria-label="مهارت‌ها">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">مهارت‌های اصلی</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>فرانت‌اند</h4>
+                <p>Next.js (App Router)، React، TypeScript، Tailwind، ShadCN، Motion.</p>
+                <div class="tags">
+                  <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+                </div>
+              </article>
+              <article class="card">
+                <h4>بک‌اند</h4>
+                <p>Laravel، REST </p>
+                <div class="tags"><span class="tag">Laravel</span><span class="tag">MySQL</span></div>
+              </article>
+              <!-- <article class="card">
+                <h4>ابر و DevOps</h4>
+                <p>CI/CD، Docker، Nginx، Cloudflare، Vercel، GitHub Actions.</p>
+                <div class="tags"><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Vercel</span></div>
+              </article> -->
+              <article class="card">
+                <h4>سایر مهارت‌ها</h4>
+                <p>یادگیرنده پایتون و راست، علاقه‌مند به هوش مصنوعی و علم داده.</p>
+                <div class="tags"><span class="tag">Ai</span><span class="tag">Python</span></div>
+              </article>
+            </div>
+            <div class="meta">نمای کلی مهارت‌ها • به‌روزرسانی شده اخیرا
+          </div>
+        </div>
+      </section>
+      <section id="section-experience" class="messages hidden" role="region" aria-label="تجربیات">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">تجربیات</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>توسعه‌دهنده فرانت‌اند</h4>
+              </article>
+              <!-- <article class="card">
+                <h4>توسعه‌دهنده فول‌استک ارشد • شرکت شما</h4>
+                <p>۱۴۰۱ — اکنون • ساخت سیستم طراحی ماژولار، کاهش زمان تحویل ویژگی‌ها به میزان ۳۰٪.</p>
+                <div class="tags"><span class="tag">Next.js</span><span class="tag">Node</span><span class="tag">سیستم طراحی</span></div>
+              </article>
+              <article class="card">
+                <h4>مهندس نرم‌افزار • شرکت دیگر</h4>
+                <p>۱۳۹۹ — ۱۴۰۱ • رهبری مهاجرت به میکرو-فرانت‌اند؛ بهبود شاخص‌های وب اصلی.</p>
+                <div class="tags"><span class="tag">React</span><span class="tag">عملکرد</span><span class="tag">میکرو-فرانت‌اند</span></div>
+              </article> -->
+            </div>
+            <div class="meta">ترتیب زمانی • نمای فشرده</div>
+          </div>
+        </div>
+      </section>
+      <section id="section-projects" class="messages hidden" role="region" aria-label="پروژه‌ها">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">پروژه‌های منتخب</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>Vectonents . کتابخانه‌ی آیکن</h4>
+                <p>ساخته شده با Nextjs, Tailwind, ShadCN </p>
+                <div class="tags"><span class="tag"><a href="https://vectonents-web.vercel.app" target="_blank">مشاهده</a></span> <span class="tag">Next.js</span><span class="tag">ShadCN</span></div>
+              </article>
+              <article class="card">
+                <h4>زمانبدی کلادسیم</h4>
+                <p>نمونه الگوریتم زمان‌بندی وظایف چند‌هدفه با استفاده از فراابتکاری.</p>
+                <div class="tags"><span class="tag">جاوا</span><span class="tag">بهینه‌سازی</span><span class="tag">تحقیق</span><span class="tag">Cloudsim</span></div>
+              </article>
+              <!-- <article class="card">
+                <h4>ترلیت — مدیر وظایف مشابه تrello</h4>
+                <p>بوردها، کارت‌های کشیدن و رها کردن، همگام‌سازی لحظه‌ای. ساخته شده با Next.js، App Router.</p>
+                <div class="tags"><span class="tag">Next.js</span><span class="tag">DND</span><span class="tag">ShadCN</span></div>
+              </article> -->
+              <!-- <article class="card">
+                <h4>اتوهلث — تلمتری خودرو و کنترل از راه دور</h4>
+                <p>تشخیص سلامت خودرو + قفل‌های از راه دور، ساخته شده به عنوان یک وب‌اپلیکیشن پیشرونده.</p>
+                <div class="tags"><span class="tag">PWA</span><span class="tag">Node</span><span class="tag">اینترنت اشیاء</span></div>
+              </article> -->
+             
+            </div>
+            <div class="meta">بیشتر در گیت‌هاب → <a target="_blank" href="https://github.com/pooya-poi" rel="noopener">github.com/pooya-poi</a></div>
+          </div>
+        </div>
+      </section>
+      <section id="section-contact" class="messages hidden" role="region" aria-label="تماس">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">بیایید با هم کار کنیم</h3>
+            <p class="muted small">من برای موقعیت‌های تمام‌وقت و پروژه‌های منتخب فریلنسری باز هستم.</p>
+            <form id="contactForm" class="cards" onsubmit="return false">
+              <label class="card" style="grid-column: span 6">
+                <span class="small muted">نام شما</span>
+                <input required name="name" placeholder="" style="margin-top:6px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04); color:var(--text)"/>
+              </label>
+              <label class="card" style="grid-column: span 6">
+                <span class="small muted">ایمیل شما</span>
+                <input required type="email" name="email" placeholder="" style="margin-top:6px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04); color:var(--text)"/>
+              </label>
+              <label class="card" style="grid-column: span 12">
+                <span class="small muted">پیام</span>
+                <textarea required name="message" rows="4" placeholder="جزپیات پروژه خودتون رو بنویسید" style="margin-top:6px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04); color:var(--text)"></textarea>
+              </label>
+            </form>
+            <div style="display:flex; gap:10px; margin-top:10px">
+              <button class="btn" id="copyEmail" title="کپی ایمیل">کپی ایمیل</button>
+              <button class="btn primary" id="sendEmail">ارسال</button>
+            </div>
+            <div class="meta">زمان پاسخ‌دهی • کمتر از ۲۴ ساعت</div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="آواتار"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">سایر راه های ارتباطی</h3>
+            <p class="muted small">تلگرام: </p>
+           
+           
+            <div class="meta">زمان پاسخ‌دهی • کمتر از ۲۴ ساعت</div>
+          </div>
+        </div>
+      </section>
+      <div class="composer" aria-hidden="true">
+        <input id="quickInput" placeholder="برای پرش به بخش / را تایپ کنید..." />
+        <button class="btn" id="attach">＋</button>
+        <button class="btn primary" style="flex-grow: 0;"  id="send" title="این یک رابط کاربری نمایشی است">ارسال</button>
+      </div>
+    </main>
+  </div>
+  <dialog id="mobileMenu">
+    <div style="padding:16px; border-bottom:1px solid rgb(255 255 255 / 10%)">
+      <strong>بخش‌ها</strong>
+      <button style="float:left" class="btn" id="closeMenu">✕</button>
+    </div>
+    <div style="padding:12px" id="mobileMenuItems"></div>
+  </dialog>
+  <script src="../scripts.js"></script>
+</body>
+</html>
