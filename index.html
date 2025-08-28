@@ -1,12 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pooya Ghorbani — Resume</title>
+  <meta name="description" content="Minimal, messenger‑style resume website with smooth animations and modern typography." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+ 
 </head>
 <body>
-	<h1>Test: Pooya-poi</h1>
+  <a href="#main" class="muted" style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden">Skip to content</a>
+  <!-- ======= Mobile Topbar ======= -->
+  <header class="topbar">
+    <button class="hamburger" id="openMenu" aria-label="Open menu">☰</button>
+    <div style="display:flex; align-items:center; gap:10px">
+      <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar" style="width:36px; height:36px" />
+      <div>
+        <div class="name">Pooya Ghorbani</div>
+        <div class="role">Web Developer</div>
+      </div>
+    </div>
+  </header>
+  <div class="app" id="app">
+    <!-- ======= Sidebar (Messenger chats list) ======= -->
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+      <div class="brand">
+        <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar"/>
+        <div>
+          <div class="name">Pooya Ghorbani</div>
+          <div class="role">Web Developer</div>
+        </div>
+      </div>
+      <div class="search" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21L16.65 16.65M19 11.5C19 15.6421 15.6421 19 11.5 19C7.35786 19 4 15.6421 4 11.5C4 7.35786 7.35786 4 11.5 4C15.6421 4 19 7.35786 19 11.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <input id="search" type="search" placeholder="Search sections… ( / )" aria-label="Search sections" />
+      </div>
+      <nav class="menu" id="menu" aria-label="Sections">
+        <button data-section="about" aria-current="page">💬 About Me <span class="pill">Intro</span></button>
+        <button data-section="skills">🧰 Skills</button>
+        <button data-section="experience">🧑‍💻 Experience</button>
+        <button data-section="projects">📦 Projects</button>
+        <button data-section="contact">📨 Contact</button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="ghost" id="downloadCV">📥 CV</button>
+        <!-- <button class="primary" id="hireMe">Hire me</button> -->
+      </div>
+      <small class="muted" style="text-align:center">© <span id="year"></span> Pooya Ghorbani</small>
+    </aside>
+    <!-- ======= Chat Panel (content as messages) ======= -->
+    <main class="chat" id="main" tabindex="-1">
+      <div class="thread-title">
+        <span class="status-dot" aria-hidden="true"></span>
+        <div>
+          <div style="font-weight:700">My Resume</div>
+          <!-- <div class="muted small">Modern • Minimal • Smooth</div> -->
+        </div>
+
+        <div style="margin-left:auto; display:flex; gap:8px; align-items:center">
+          <a class="toggle-lang" href="./fa/index.html">🇮🇷 fa</a>
+          <!-- <span class="chip">Press <span class="mono">/</span> to search</span> -->
+        </div>
+      </div>
+      <!-- ======= Threads / Sections ======= -->
+      <section id="section-about" class="messages" role="region" aria-label="About Me">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar"/>
+          <div class="bubble">
+            <h2 style="margin:0 0 6px">Hey! I'm <span style="font-weight:800">Pooya</span> 👋</h2>
+            <p>A tech‑savvy innovator who loves crafting delightful web experiences. I design and build scalable apps with a keen eye for UX and performance. From cloud‑ready backends to crisp, animated frontends—I bring ideas to life.</p>
+            <div class="meta">Currently exploring AI, and data science.</div>
+          </div>
+        </div>
+        <div class="msg right">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=67" alt="Recruiter"/>
+          <div class="bubble">
+            <p>What makes you different?</p>
+            <div class="meta">Recruiter • just now</div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar"/>
+          <div class="bubble">
+            <ul style="padding-left:18px; margin:0">
+              <li>Product‑first mindset with strong system design skills.</li>
+              <li>Clean, modular code (Next.js, TypeScript, Laravel).</li>
+              <li>Rapid prototyping with beautiful, accessible UI.</li>
+            </ul>
+            <div class="meta">Typing awareness • 2m ago</div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== skills section ========== -->
+      <section id="section-skills" class="messages hidden" role="region" aria-label="Skills">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">Core Stack</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>Frontend</h4>
+                <p>Next.js (App Router), React, TypeScript, Tailwind, ShadCN, Motion.</p>
+                <div class="tags">
+                  <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+                </div>
+              </article>
+              <article class="card">
+                <h4>Backend</h4>
+                <p>Laravel, REST </p>
+                <div class="tags"><span class="tag">Laravel</span><span class="tag">MySQL</span></div>
+              </article>
+              <!-- <article class="card">
+                <h4>Cloud & DevOps</h4>
+                <p>CI/CD, Docker, Nginx, Cloudflare, Vercel, GitHub Actions.</p>
+                <div class="tags"><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Vercel</span></div>
+              </article> -->
+              <article class="card">
+                <h4>Extras</h4>
+                <p>AI & data science enthusiast.</p>
+                <div class="tags"><span class="tag">Ai</span><span class="tag">Python</span></div>
+              </article>
+            </div>
+            <div class="meta">Skills snapshot • updated this recently</div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== experience section ========== -->
+      <section id="section-experience" class="messages hidden" role="region" aria-label="Experience">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">Experience</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>Frontend Developer</h4>
+                <p>2024 — 2025 • </p>
+                <div class="tags"><span class="tag">Next.js</span><span class="tag">R&D</span></div>
+              </article>
+              <!-- <article class="card">
+                <h4>Software Engineer • Another Co.</h4>
+                <p>2020 — 2022 • Led migration to micro‑frontends; improved Core Web Vitals.</p>
+                <div class="tags"><span class="tag">React</span><span class="tag">Performance</span><span class="tag">Micro‑frontends</span></div>
+              </article> -->
+            </div>
+            <div class="meta">Chronological • compact view</div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== Projects section ========== -->
+      <section id="section-projects" class="messages hidden" role="region" aria-label="Projects">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">Featured Projects</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>Vectonents . icon library</h4>
+                <p>built with Nextjs, Tailwind, ShadCN </p>
+                <div class="tags"><span class="tag"><a href="https://vectonents-web.vercel.app" target="_blank">View</a></span> <span class="tag">Next.js</span><span class="tag">ShadCN</span></div>
+              </article>
+              
+              <article class="card">
+                <h4>CloudSim Scheduler</h4>
+                <p>Multi‑objective task scheduling algorithm demo using metaheuristics.</p>
+                <div class="tags"><span class="tag">Java</span><span class="tag">Optimization</span><span class="tag">Research</span></div>
+              </article>
+            </div>
+            <div class="meta">More on GitHub → <a target="_blank" href="https://github.com/pooya-poi" rel="noopener">github.com/pooya-poi</a></div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== Contact section ========== -->
+      <section id="section-contact" class="messages hidden" role="region" aria-label="Contact">
+        <div class="msg">
+          <img class="avatar" src="https://i.pravatar.cc/200?img=15" alt="Avatar"/>
+          <div class="bubble">
+            <h3 style="margin:0 0 8px">Let's work together</h3>
+            <p class="muted small">I'm open to full‑time roles and select freelance projects.</p>
+            <form id="contactForm" class="cards" onsubmit="return false">
+              <label class="card" style="grid-column: span 6">
+                <span class="small muted">Your name</span>
+                <input required name="name" placeholder="" style="margin-top:6px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04); color:var(--text)"/>
+              </label>
+              <label class="card" style="grid-column: span 6">
+                <span class="small muted">Email</span>
+                <input required type="email" name="email" placeholder="" style="margin-top:6px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04); color:var(--text)"/>
+              </label>
+              <label class="card" style="grid-column: span 12">
+                <span class="small muted">Message</span>
+                <textarea required name="message" rows="4" placeholder="write about the project ✨" style="margin-top:6px; width:100%; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04); color:var(--text)"></textarea>
+              </label>
+            </form>
+            <div style="display:flex; gap:10px; margin-top:10px">
+              <button class="btn" id="copyEmail" title="Copy email">Copy email</button>
+              <button class="btn primary" id="sendEmail">Send</button>
+            </div>
+            <div class="meta">Response time • under 24h</div>
+          </div>
+        </div>
+      </section>
+      <div class="composer" aria-hidden="true">
+        <input id="quickInput" placeholder="Type / to jump to a section…" />
+        <button class="btn" id="attach">＋</button>
+        <button class="btn primary" style="flex-grow: 0;" id="send" title="This is a demo UI">Send</button>
+      </div>
+    </main>
+  </div>
+  <dialog id="mobileMenu">
+    <div style="padding:16px; border-bottom:1px solid rgb(255 255 255 / 10%)">
+      <strong>Sections</strong>
+      <button style="float:right" class="btn" id="closeMenu">✕</button>
+    </div>
+    <div style="padding:12px" id="mobileMenuItems"></div>
+  </dialog>
+  <script src="scripts.js"></script>
 </body>
 </html>
